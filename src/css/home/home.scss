@@ -1,0 +1,21 @@
+$white : rgb(255, 255, 255);
+
+@mixin font($size, $weight, $color){
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+}
+
+body{
+    background-color: black;
+}
+
+.content{
+    width: 100%;
+    position: relative;
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: rgb(83, 83, 83);
+}
+
+@import 'carrousel';

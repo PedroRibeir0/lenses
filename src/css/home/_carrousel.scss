@@ -1,0 +1,93 @@
+.carrousel{
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    position: relative;
+    height: 600px;
+
+    .logo{
+        z-index: 3;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        @include font(22px, 400, $white)
+    }
+
+    .images{
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        img{
+            opacity: 0;
+            height: 100%;
+            position: absolute;
+            object-fit: cover;
+        }
+        img.selected{
+            opacity: 1;
+        }
+    }
+    
+
+    .infos{
+        z-index: 2;
+        background-color: rgba(3, 3, 3, 0.6);
+        box-shadow: -3px 3px 3px rgba(0, 0, 0, 0.7);
+        width: 70%;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+
+        
+        h1{
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            @include font(48px, 100, $white)
+        }
+
+        span{
+            display: block;
+            margin-bottom: 35px;
+            @include font(19px, 600, $white)
+        }
+
+        .line{
+            height: 74px;
+            width: 5px;
+            background-color: $white;
+            position: absolute;
+            left: 195px;
+            top: 30px;
+        }
+
+        p{
+            margin-bottom: 30px;
+            @include font (18px, 300, $white)
+        }
+
+        .explore-button{
+            background-color: transparent;
+            border: 2px solid $white;
+            outline: none;
+            padding: 7px 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            @include font (16px, 400, $white)
+        }
+    }
+
+    .fade{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        bottom: 0;
+        background-image: linear-gradient(to bottom, transparent 60%, black);
+    }
+}
