@@ -1,4 +1,9 @@
 $white : rgb(255, 255, 255);
+$black: rgb(0, 0, 0);
+$gray: rgb(83, 83, 83);
+$dark-blue: rgb(58, 81, 108);
+$teal: rgb(0, 128, 128);
+
 
 @mixin font($size, $weight, $color){
     font-size: $size;
@@ -18,4 +23,4 @@ body{
     background-color: rgb(83, 83, 83);
 }
 
-@import 'carrousel';
+@import 'carrousel', 'menu', 'shop';

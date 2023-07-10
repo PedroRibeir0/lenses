@@ -19,6 +19,9 @@ body {
   height: 600px;
 }
 .carrousel .logo {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   z-index: 3;
   position: absolute;
   top: 20px;
@@ -37,11 +40,15 @@ body {
   left: 0;
 }
 .carrousel .images img {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   opacity: 0;
   height: 100%;
   position: absolute;
   -o-object-fit: cover;
      object-fit: cover;
+  transition: all 1s ease;
 }
 .carrousel .images img.selected {
   opacity: 1;
@@ -92,14 +99,127 @@ body {
   padding: 7px 30px;
   text-transform: uppercase;
   letter-spacing: 2px;
+  transition: background 0.2s;
   font-size: 16px;
   font-weight: 400;
   color: rgb(255, 255, 255);
 }
+.carrousel .infos .explore-button:hover {
+  background-color: rgba(134, 181, 212, 0.2);
+}
+.carrousel .infos .explore-button:active {
+  transform: scale(0.99);
+}
 .carrousel .fade {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  height: 100%;
+  height: 80%;
   position: absolute;
-  bottom: 0;
-  background-image: linear-gradient(to bottom, transparent 60%, black);
+  bottom: -40%;
+  background-image: linear-gradient(to bottom, transparent, black 50%, transparent);
+}
+.carrousel .fade ul {
+  position: relative;
+  top: 20px;
+  z-index: 4;
+  display: flex;
+  list-style: none;
+  width: 25%;
+  justify-content: space-between;
+}
+.carrousel .fade ul li {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgb(83, 83, 83);
+  transition: all 0.5s;
+}
+.carrousel .fade ul li.selected {
+  background-color: rgb(255, 255, 255);
+}
+
+.menu-icon {
+  position: absolute;
+  z-index: 12;
+  right: 20px;
+  top: 20px;
+  font-size: 25px;
+  font-weight: 500;
+  color: rgb(0, 0, 0);
+}
+
+#menu-ham {
+  color: white;
+}
+
+.menu {
+  width: 55%;
+  height: 100%;
+  list-style: none;
+  position: absolute;
+  z-index: 10;
+  right: 0;
+  top: 0;
+  background-color: rgb(255, 255, 255);
+  padding: 40px;
+  padding-top: 90px;
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 13px;
+  box-shadow: -5px 5px 20px 20px rgba(0, 0, 0, 0.3);
+  font-size: 22px;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+}
+.menu .menu-opt {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.menu .menu-opt:hover {
+  color: #a0a0a0;
+}
+
+.shop {
+  width: 100%;
+  padding-top: 200px;
+  background-image: linear-gradient(to bottom, black 10%, rgb(0, 128, 128));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.shop .designed-by-you {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.shop .designed-by-you h2 {
+  text-transform: uppercase;
+  font-size: 25px;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+}
+.shop .designed-by-you h3 {
+  background-color: rgb(255, 255, 255);
+  width: 60%;
+  text-align: center;
+  padding: 2px 0;
+  font-size: 25px;
+  font-weight: 600;
+  color: rgb(0, 128, 128);
+}
+.shop .designed-by-you p {
+  text-align: center;
+  width: 82%;
+  margin: 20px 0;
+  font-size: 17px;
+  font-weight: 300;
+  color: rgb(255, 255, 255);
 }/*# sourceMappingURL=home.css.map */

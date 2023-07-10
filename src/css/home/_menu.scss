@@ -1,0 +1,37 @@
+.menu-icon{
+    position: absolute;
+    z-index: 12;
+    right: 20px;
+    top: 20px;
+    @include font(25px ,500, $black)
+}
+
+#menu-ham{
+    color: white;
+}
+
+.menu{
+    width: 55%;
+    height: 100%;
+    list-style: none;
+    position: absolute;
+    z-index: 10;
+    right: 0;
+    top: 0;
+    background-color: $white;
+    padding: 40px;
+    padding-top: 90px;
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 13px;
+    box-shadow: -5px 5px 20px 20px rgba(0, 0, 0, 0.3);
+    
+    .menu-opt{
+        user-select: none;
+        &:hover{
+            color: lighten($color: $gray, $amount: 30);
+        }
+    }
+    @include font(22px, 600, $black)
+}

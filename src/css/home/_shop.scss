@@ -1,0 +1,37 @@
+.shop{
+    width: 100%;
+    padding-top: 200px;
+    background-image: linear-gradient(to bottom, black 10%, $teal);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .designed-by-you{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        h2{
+            text-transform: uppercase;
+            @include font(25px, 500, $white)
+        }
+
+        h3{
+            background-color: $white;
+            width: 60%;
+            text-align: center;
+            padding: 2px 0;
+            @include font(25px, 600, $teal)
+        }
+
+        p{
+            text-align: center;
+            width: 82%;
+            margin: 20px 0;
+            @include font(17px, 300, $white)
+        }
+    }
+}
