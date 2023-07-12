@@ -6,6 +6,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-bottom: 80px;
 
     .designed-by-you{
         display: flex;
@@ -32,6 +33,25 @@
             width: 82%;
             margin: 20px 0;
             @include font(17px, 300, $white)
+        }
+
+        .shop-now-button{
+            margin: 10px 0;
+            background-color: transparent;
+            outline: none;
+            border: none;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: color, gap .2s;
+
+            &:hover{
+                color: lighten($color: $gray, $amount: 20);
+                gap: 15px;
+            }
+            @include font(20px, 500, $white)
         }
     }
 

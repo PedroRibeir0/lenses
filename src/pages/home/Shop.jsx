@@ -1,4 +1,5 @@
 import { LiaAngleRightSolid } from 'react-icons/lia'
+import { AiOutlineArrowRight } from 'react-icons/ai'
 import Items from './Items';
 
 
@@ -26,7 +27,10 @@ export default function Shop() {
           <h2>Designed by you</h2>
           <h3>Your Style</h3>
           <p>Express your unique style with customizable lenses and frames. Make a statement that's exclusively you. Discover endless possibilities.</p>
-          <button className="shop-now-button">Shop now</button>
+          <button className="shop-now-button">
+            <span>Shop now</span>
+            <AiOutlineArrowRight/>
+          </button>
       </div>
       <div className="shop-images">
         {Items.map((item, index)=>{

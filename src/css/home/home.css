@@ -199,6 +199,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-bottom: 80px;
 }
 .shop .designed-by-you {
   display: flex;
@@ -229,6 +230,25 @@ body {
   font-size: 17px;
   font-weight: 300;
   color: rgb(255, 255, 255);
+}
+.shop .designed-by-you .shop-now-button {
+  margin: 10px 0;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: color, gap 0.2s;
+  font-size: 20px;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+}
+.shop .designed-by-you .shop-now-button:hover {
+  color: #868686;
+  gap: 15px;
 }
 .shop .shop-images {
   margin-top: 50px;
